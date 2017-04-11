@@ -1,0 +1,59 @@
+Developing Data Products - Shiny App 
+========================================================
+author: Ravi Salagame
+date: April 11th 2017
+autosize: true
+
+Overview
+========================================================
+
+
+- A Simple MTCARS Plotting application
+- Uses mtcars data 
+- Allows choice of variables to plot
+- Plots regression line as well
+
+
+Data Summary
+========================================================
+- MTCARS data has 11 variables with 32 data points
+- We will focus on Cylinder, HP and Weight
+- A brief summary of the data below
+
+```{r}
+summary(mtcars)
+
+```
+
+Project Description
+========================================================
+- User has to choose Number of Cylinders first
+- Based on number of cylinders, we would plot mpg 
+- The x-axis variable is also chosen by the user and it has 2 options
+- The options are Weight (wt) or HP (HP) both of which influence mpg
+
+```{r echo=FALSE}
+library(jpeg)
+jj<-readJPEG("C:\\ProgramManagement\\General\\Course\\Developing Data Products\\Input.jpg",native=TRUE)
+plot(0:4,0:4,type="n",ann=FALSE,axes=FALSE)
+rasterImage(jj,0,0,4,4)
+```
+
+
+Program Output
+========================================================
+- Output images of the program are shown below 
+- We also draw a "regression line" using lm function
+
+```{r, echo=FALSE}
+library(jpeg)
+jj<-readJPEG("C:\\ProgramManagement\\General\\Course\\Developing Data Products\\Output.jpg",native=TRUE)
+plot(0:8,0:8,type="n",ann=FALSE,axes=FALSE)
+rasterImage(jj,0,0,8,8)
+```
+
+Summary
+========================================================
+- A simple Shiny app has been developed as part of the course
+- App plots mpg v/s another variable of choice
+- A linear regressor is also calculated and drawn on the chart
