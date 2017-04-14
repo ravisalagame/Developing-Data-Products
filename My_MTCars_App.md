@@ -12,6 +12,7 @@ Overview
 - Uses mtcars data 
 - Allows choice of variables to plot
 - Plots regression line as well
+- Shows mean data table
 
 
 Data Summary
@@ -63,11 +64,7 @@ Program Output
 ========================================================
 - Output images of the program are shown below 
 - We also draw a "regression line" using lm function
+- At the bottom of the page, mean table is displayed
 
 ![plot of chunk unnamed-chunk-3](My_MTCars_App-figure/unnamed-chunk-3-1.png)
 
-Summary
-========================================================
-- A simple Shiny app has been developed as part of the course
-- App plots mpg v/s another variable of choice
-- A linear regressor is also calculated and drawn on the chart

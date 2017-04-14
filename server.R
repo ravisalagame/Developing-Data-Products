@@ -18,6 +18,10 @@ mpgData <- mtcars
 mpgCyl4 <- subset(mpgData,cyl==4)
 mpgCyl6 <- subset(mpgData,cyl==6)
 mpgCyl8 <- subset(mpgData,cyl==8)
+cylC<-c(4,6,8)
+meanmpg<-c(mean(mpgCyl4$mpg),mean(mpgCyl6$mpg),mean(mpgCyl8$mpg))
+meanTabl<-cbind(cylC,meanmpg)
+colnames(meanTabl)<-c("No. of Cylinders","Mean Mpg")
 
 # Define server logic required to plot various variables against mpg
 shinyServer(function(input, output) {
@@ -70,4 +74,9 @@ shinyServer(function(input, output) {
     }
 
   })
+  
+  # a large table, reative to input$show_vars
+  output$mytable1 = renderDataTable({
+    meanTabl
+    })
 })
